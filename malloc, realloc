@@ -1,0 +1,106 @@
+/**  #include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *p;
+    int i;
+
+    p=(int*)malloc(10);
+    if(p==NULL )
+    {
+        printf("Memory All GetFailed");
+        return;
+    }
+    for(i=0;i<5;i++)
+        printf("%d \n",p[i]);
+}    **/
+/**
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int a = 10;                         // RTE  free is only allowed to used in Heap area not in stack area
+   int *p = &a;
+   printf("%d",&p);
+   free(p);
+}
+**/
+
+
+
+
+/**#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+   int *p ;   // stack segment
+   p=(int *)malloc(5);
+   free(p);
+   *p=10;   //  RTE  trying to access which is already freed , we cannot able to access the already freed memory
+}**/
+/**
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main()
+{
+    int *p,*t,i;
+    p = malloc(10);
+    for(i=0;i<5;i++)   // To overcome the updation of malloc() size to 20 we don't need to go for memory leak eith temporory variablr and once the whole loop process
+        p[i]=i*10;
+    p=realloc(p,20);  // so we are using realloc(20)to limit the code
+
+    //if the interviewer asked for free the memory with free() we can use reallo(p,0)to free the memory without pre-defined free
+ }
+ **/
+
+
+/** #include <stdio.h>
+
+#include <stdlib.h>
+
+int main()
+{
+   int **p,i;
+   p=malloc(6);
+   *p=malloc(8);
+   *(p+1)=malloc(8);
+   *(p+2)=malloc(8);
+   for(i=0;i<3;i++)
+   {
+        p[i]=(int*) malloc(8);
+    //free(p[0]);
+    //free(p[1]);
+    //free(p[2]);
+    //free(p[3]);
+    //p=NULL;
+    printf("%d\n",p[i]);
+
+   }
+
+}  **/
+
+/**#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int *p;
+    int i;
+    p=(int *)malloc(10);
+    if(p==NULL)
+    {
+        cout<<"Memory All GetFailed";
+
+    }
+    for(i=0;i<5;i++)
+        cout<<p[i];
+}
+**/
+
