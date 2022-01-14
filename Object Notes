@@ -1,0 +1,31 @@
+1.Whenever we want to share one variable across multiple objects of same type in the scenario we need to go for a static variable.
+2.Static variable is called class level variable(Example:count).
+3.Static variable is created when the class is loaded on to the RAM
+4. Whenever you want to maintain an individual copy for every object. in that scenario we nee dto go for instance variable.
+5.Memory will be allocated for instance variable when object is created.
+6.Whenever we want to call any member function without having any existing object in the time/scenario. we need to go for static member function.
+7.Static member function can be called by using  class name or object name but recommended to use class name only.
+8. IN the state member function we can access only static data.
+9.Instance member function can be called only by using object name
+10.In the instance member function we can access both static and instance(static and non static data)
+11.we cannot use "this" pointer with static function.
+12.Static functions can be called directly without having any object.
+
+class test
+{
+static int x; // declaration
+public:
+};
+int test::x=0; // definition
+void main()
+{
+test t1;
+cout<<t1.x;
+}
+
+OUTPUT : Compilation Error
+
+
+1) Static variable is whether declared in public or private section definition must be outside only.
+2)If declaration is there in private then we cannot access that variable outside
+3)If the declaration is under private section then we can access that variable outside.
