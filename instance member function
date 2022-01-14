@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class emp
+{
+    int id;
+    public:
+    static int count;
+    emp()
+    {
+        id=++count;
+        
+    }
+    void printid()    // instance member function
+    {
+        cout<<id<<endl;
+    }
+};
+int emp ::count=0;
+int main()
+{
+    emp e1;
+    e1.printid();
+    emp e2;
+    e2.printid();
+    return 0;
+}
