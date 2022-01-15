@@ -1,0 +1,38 @@
+class A
+{
+  (1). int private;
+  (2). void f1()
+  {
+  }
+  protected:
+  (3). int protected;
+  (4). void f2()
+  {
+  ]
+  public:
+  (5)int public;
+  (6). void f3()
+  {
+  }
+};
+output:
+                                                                        //The size of the child class object is always either same as parent
+class B:A                                                               //or more then(greater than or equal to parent class object)
+{
+private:
+3,4
+5,6
+};
+                                                                        // Size of the child class object is sum of non static data
+class c: protected A                                                    //memeber(instance of object) of parents and child
+{
+protected:
+3,4
+5,6
+};
+
+class D: public A
+{
+private:3,4
+public :5,6
+};
