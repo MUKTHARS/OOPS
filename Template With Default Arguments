@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+template<class k , int s=10>
+class test 
+{
+    k a[s];
+    public:
+    void getsize()
+    {
+        cout<<sizeof(a);
+        
+    }
+};
+int main()
+{
+    test <int,5> s1;
+s1.getsize();//20
+
+test<short,15>s3;
+s3.getsize();
+}
