@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+class test 
+{
+    int i;
+    char ch;
+    public:
+    void fun1(int m,char n)
+    {
+        i=m;
+        ch=n;
+    }
+    void fun2 (int i , char ch)
+    {
+        this->i=i;
+        this->ch=ch;
+    }
+};
+
+int main()
+{
+    test t1;
+    t1.fun1(10,'a');
+    test t2;
+    t2.fun2(100,'b');
+
+}
