@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class batsman
+{
+    public:
+    virtual void specialshot()
+    {
+        cout<<"specialshot"<<endl;
+    }
+};
+
+class dhoni: public batsman
+{
+    public:
+    void specialshot()
+    {
+        cout<<"helicoptershot"<<endl;
+    }
+};
+class kohli: public batsman
+{
+    public:
+    void specialshot()
+    {
+        cout<<"cover drive"<<endl;
+    }
+};
+int main()
+{
+    dhoni d;
+    kohli k;
+    batsman* d1= &d;
+    batsman* k1 = &k;
+    d1-> specialshot();
+    k1 -> specialshot();
+}
