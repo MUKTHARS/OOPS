@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+class rectangle{
+    public :
+    void area()
+    {
+        cout<<"Rectangle"<<endl;
+        
+    }
+};
+class square{
+    public :
+    void area()
+    {
+        cout<<"square"<<endl;
+        
+    }
+};
+class shape:public rectangle,public square
+{
+    public:
+    
+};
+int main()
+{
+    shape s1;
+    s1.area();
+}
+ 
+ OUTPUT :
+ main.cpp:28:8: error: request for member ‘area’ is ambiguous
+   28 |     s1.area();
+      |        ^~~~
+main.cpp:14:10: note: candidates are: ‘void square::area()’
+   14 |     void area()
+      |          ^~~~
+main.cpp:6:10: note:                 ‘void rectangle::area()’
+    6 |     void area()
+      |          ^~~~
+      
+      
+#include <iostream>
+
+using namespace std;
+class rectangle{
+    public :
+    void area()
+    {
+        cout<<"Rectangle"<<endl;
+        
+    }
+};
+class square{
+    public :
+    void area()
+    {
+        cout<<"square"<<endl;
+        
+    }
+};
+class shape:public rectangle,public square
+{
+    public:
+    
+};
+int main()
+{
+    shape s1;
+    s1.rectangle::area();
+    s1.square::area();
+}
+OUTPUT : Rectangle
+         square
