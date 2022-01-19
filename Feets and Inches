@@ -36,3 +36,41 @@ int main()
 
  
 }
+
+ANOTHER METHOD :
+
+#include <iostream>
+
+using namespace std;
+class fps
+{
+    int ft;
+    float ins;
+    public:
+    fps();
+    void getdata();
+    void showdata();
+
+};
+fps::fps()
+{ft=ins=0;}
+void fps::getdata()
+{cout<<"Enter ft : ";
+    cin>>ins;
+}
+void fps::showdata()
+{if(ins>=12.0)
+         {
+             ft+=(int) ins/12;
+             ins -=(int) ins/2*12;
+         }
+         cout<<ft<<"\' "<<ins<<"\"";}
+int main()
+{
+    fps f1;
+    f1.getdata();
+    f1.showdata(); 
+
+ 
+}
+
