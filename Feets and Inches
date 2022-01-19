@@ -1,21 +1,38 @@
+#include <iostream>
+
+using namespace std;
 class fps
 {
- int ft;
- float ins;
- Public :
- fps()
-{
-ft=ins=0
-}
-void getdata()
-{
-cout<<"Enter ft";
-cin>>ins;
-}
+     int ft;
+     float ins;
+     public :
+     fps()
+     {
+         ft=ins=0;
+     }
+     void getdata()
+     {
+         cout<<"Enter ft : ";
+         cin>>ins;
+
+     }
+     void showdata()
+     {
+         if(ins>=12.0)
+         {
+             ft+=(int) ins/12;
+             ins -=(int) ins/2*12;
+         }
+         cout<<ft<<"\' "<<ins<<"\"";
+         
+     }
+
 };
-void main()
+int main()
 {
-fps f1;
- f1.getdata();
- f1.showdate();
+    fps f1;
+    f1.getdata();
+    f1.showdata(); 
+
+ 
 }
