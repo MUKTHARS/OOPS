@@ -1,0 +1,21 @@
+class fps
+{
+ int ft;
+ float ins;
+ Public :
+ fps()
+{
+ft=ins=0
+}
+void getdata()
+{
+cout<<"Enter ft";
+cin>>ins;
+}
+};
+void main()
+{
+fps f1;
+ f1.getdata();
+ f1.showdate();
+}
