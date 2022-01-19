@@ -24,8 +24,10 @@ int main()
 {
    value<int> v1(5);
    value<char> v2('v');
+   value<double> v3(6.77);
    return 0;
 }
 //OUTPUT : 
 5 is a number
 v is a character
+6.77 is a number
