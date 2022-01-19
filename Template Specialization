@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+
+using namespace std;
+template<class T>
+class value{
+    public:
+    value(T a){
+        cout<<a<<" "<<"is a number"<<endl;
+    }
+};
+template<>
+class value <char>{
+    public:
+    value(char a)
+    {
+        cout<<a<<" "<<"is a character"<<endl;
+    }
+    
+};
+
+int main()
+{
+   value<int> v1(5);
+   value<char> v2('v');
+   return 0;
+}
+//OUTPUT : 
+5 is a number
+v is a character
