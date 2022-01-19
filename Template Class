@@ -27,3 +27,35 @@ int main()
    return 0;
 }
 //OUTPUT:6
+
+
+
+#include <iostream>
+
+using namespace std;
+template<class T>
+class Numbers{
+    T first;
+    T second;
+    public:
+    Numbers(T a , T b){
+        first  = a;
+        second = b;
+    }
+    T larger()
+    {
+        if(first > second)
+        {
+            return first;
+        }
+        return second;
+    }
+};
+
+int main()
+{
+    Numbers<double> numbers(6.7,4);
+    cout<<numbers.larger()<<endl;
+    return 0;
+}
+//OUTPUT : 6.7
