@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+class fps{
+    int ft;
+    float ins;
+    public:                            (1)
+    fps()
+    void getdata();
+    void showdata();
+    fps sum(fps&);
+    fps operator + (fps&);
+};
+fps sum(fps &A , fps &B)                  (2)
+{
+    fps td;
+    td.ft=A.ft + B.ft;
+    td.ins = A.ins + B.ins;
+    if(td.ins >=12.0)
+    {
+        ft+=(int) ins/12;
+        ins  -=(int) ins/2 * 12;
+        
+    }
+    return td;
+    //cout<<ft<<"\'_" <<ins<<"\"";
+    
+}
+void main()                          (3)
+{
+    fps f1,f2,f3;
+    f1.getdata();
+    f2.getdata();
+    f3=sum(f1,f2);
+    f3=f1.sum(f2);                         (4)
+    fps::fps sum(fps &A);                  (5)
+    fps fps :: operator + (fps &A)               (6)
+    {
+        fps td;
+        td.ft = ft + A.ft;
+        td.ins = ins + A.ins;
+         if(td.ins >=12.0)
+         {
+    
+        ft+=(int) ins/12;
+        ins  -=(int) ins/2 * 12;
+        
+    }
+    return td;
+        
+    }
+}
+Solution
+/** f1,f2,f3=>f4
+case : 1 f4 = f1.sum(f2,f3);
+case : 2  f1 = f1.sum(f2);                          (7)
+           f4 = f1.sum(f2);
+case : 3 f4 = f1+f2+f3;
+          td+f3
+        f1.operator + (f2);
+        td.operator + (f3)   **/
