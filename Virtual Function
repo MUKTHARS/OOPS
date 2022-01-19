@@ -3,7 +3,7 @@ using namespace std;
 class batsman
 {
     public:
-    virtual void specialshot()
+    virtual void specialshot()                                // virtual void specialshot() = 0 ; ----> pure virtual function
     {
         cout<<"specialshot"<<endl;
     }
